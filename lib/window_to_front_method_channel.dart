@@ -9,9 +9,9 @@ class MethodChannelWindowToFront extends WindowToFrontPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('window_to_front');
 
+  // Replace the getPlatformVersion() with the following implementation
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
+  Future<void> activate() async {
+    return methodChannel.invokeMethod('activate');
   }
 }

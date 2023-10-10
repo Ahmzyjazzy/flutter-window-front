@@ -23,7 +23,8 @@ abstract class WindowToFrontPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  // Replace getPlatformVersion() with the following activate() method
+  Future<void> activate() {
+    throw UnimplementedError('activate() has not been implemented.');
   }
 }
